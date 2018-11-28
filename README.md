@@ -18,12 +18,14 @@
     同步一下库文件
 
 
-  在manifest中注册相应的
+  在manifest中注册相应的  [^code]
+  
       <activity android:name="com.xfs.fsyuncai.mavendemo.CropImageActivity"/>
         <activity android:name="com.xfs.fsyuncai.mavendemo.MainActivity"/>
         
-  调用下方代码 进入aar中的类[^code]
-    //这里的packetname 一定记住填写 调用方的packetname 因为 aar最终会被合并到调用方的manifest文件
+  调用下方代码 进入aar中的类
+    这里的packetname 一定记住填写 调用方的packetname 因为 aar最终会被合并到调用方的manifest文件  [^code]
+    
             intent.component = ComponentName("com.hazz.kotlinmvp", //packagename
                     "com.xfs.fsyuncai.mavendemo.MainActivity")//classname//
             startActivity(intent)
